@@ -85,11 +85,12 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-word-wrap: break-word;
     word-wrap: break-word;
-    background-color: #FFFFFF;
+    min-width: 1265px;
+    /*background-color: #FFFFFF;
     background-image: url("images/white-fence-background.jpg");
     background-position: center top;
     background-repeat: repeat;
-    background-size: auto auto;
+    background-size: auto auto;*/
 }
 
 
@@ -115,11 +116,9 @@ p {
     font-size: 14px;
     margin-left: auto;
     margin-right: auto;
-    width: 545px;
     text-align: justify;
     margin-bottom: 18px;
     line-height: 20px;
-    text-indent: 45px;
     font-family: monospace;
  }
 
@@ -166,13 +165,29 @@ ul.disc { list-style: disc outside; }
 ul ul, ul ol,
 ol ol, ol ul { margin: 0.75em 0 0.75em 30px; }
 ul ul li, ul ol li,
-li { margin-bottom: 0.75em; }
+li { margin-bottom: 20px; }
 
 /* Images */
 
 .widget img, .page-content img, .entry-content img, .comment-content img{
     max-width:100%;  
     height:auto;
+    display:block;
+    margin: 25px auto;
+ -webkit-box-shadow:
+            0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 14px #fff,
+                0px 0px 0px 18px rgba(0,0,0,0.2);
+   
+     -moz-box-shadow:
+            0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 14px #fff,
+                0px 0px 0px 18px rgba(0,0,0,0.2);
+   
+          box-shadow:
+            0px 0px 0px 2px rgba(0,0,0,0.6),
+                0px 0px 0px 14px #fff,
+                0px 0px 0px 18px rgba(0,0,0,0.2);
 }
     
 /* 02. Page Layout
@@ -184,6 +199,7 @@ li { margin-bottom: 0.75em; }
 
 #header {    
     
+ 
 
 }
 #main {
@@ -435,7 +451,7 @@ article.firstfull {
     font-size: 1.5em;
     font-weight: 600;
     margin: 0;
-    font-family: 'WireOne', normal;
+    font-family: "Raleway",Arial,sans-serif;
 }
 .page-header {
     padding-bottom: 1em;
@@ -543,7 +559,11 @@ footer.entry-meta {
     text-align: center;
     clear: both;
 }
-
+.entry-content {
+    width: 545px;
+    margin-left: auto;
+    margin-right:auto;
+}
 /* FlexSlider */
 .flexslider { min-height: 100px;  border: none; position: relative; zoom: 1; margin-bottom: 1.5em; }
 .flexslider .slides li { margin-bottom: 0 !important; }
@@ -1030,15 +1050,22 @@ legend span {
 }
 a.more { font-size: 12px; display: block; }
 
+.entry-content a, .entry-content a:visited {
+    color: #fff !important;
+    text-decoration:underline;
+}
 
 .entry-content ul { 
-    list-style: square; 
+    list-style: disc;
+    color:#ffffff; 
+    font-family: helvetica;
+    line-height: 20px;
 }
 .entry-content ul, .entry-content ol { 
 }
 .entry-content ul  li, .entry-content ol li {
     position: relative;
-    margin-left: 1.5em;
+    margin-left: 20px;
 } 
 .entry-content ul li ul, .entry-content ol li ol { margin: 6px 0 0 12px; } 
 .entry-content ul li ul li:last-child { margin-bottom: 0; } 
@@ -1054,8 +1081,10 @@ a.more { font-size: 12px; display: block; }
 }*/
 
 .entry-content .post_signature img {
-    box-shadow: none;
-    padding: 0;
+    
+    
+ 
+
 }
 .alignnone {
     margin:0 20px 1.5em 0;
@@ -1575,7 +1604,7 @@ object {
    font-family: "futura-pt-condensed", sans-serif; /*Futura Condensed, "Trebuchet MS", Arial, sans-serif;*/
    font-size: 2em;
    margin: 0;
-   padding-top: 3.7%;
+   padding-top: 2%;
    line-height: 40%;
    transform : scale(1,1.8);
    -webkit-transform:scale(1,1.5); /* Safari and Chrome */
@@ -1645,12 +1674,13 @@ object {
 
 .content-top h1 {
 
-    font-family: 'WireOne', normal;
+    font-family: "Raleway",Arial,sans-serif;
     font-size: 3em;
     font-weight: 300;
     color: #ffffff;
     margin: 0 0 1em;
     text-align: left;
+    padding-top: 25px;
 }
 
 
@@ -1677,7 +1707,7 @@ object {
     position: fixed;
     right: 0;
     top: 0;
-    /*width: 885px !important;*/
+    min-width: 1265px;
     width: auto;
 
 }
