@@ -21,14 +21,14 @@ jQuery(document).ready(function(){
 		},
 		messages: {
 			note: "<br />If you are adding additional RSVPs please enter your email address in case we have questions",
-			newAttending1LastName:  "<br />Please enter a last name",
-			newAttending1FirstName: "<br />Please enter a first name", 
-			newAttending2LastName:  "<br />Please enter a last name",
-			newAttending2FirstName: "<br />Please enter a first name",
-			newAttending3LastName:  "<br />Please enter a last name",
-			newAttending3FirstName: "<br />Please enter a first name", 
-      attendeeFirstName:      "<br />Please enter a first name", 
-      attendeeLastName:       "<br />Please enter a last name"
+			newAttending1LastName:  "Please enter a last name.",
+			newAttending1FirstName: "Please enter a first name.", 
+			newAttending2LastName:  "Please enter a last name.",
+			newAttending2FirstName: "Please enter a first name.",
+			newAttending3LastName:  "Please enter a last name.",
+			newAttending3FirstName: "Please enter a first name.", 
+      attendeeFirstName:      "Please enter a first name.", 
+      attendeeLastName:       "Please enter a last name."
 		}
 	});
   
