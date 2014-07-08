@@ -18,7 +18,7 @@
                     var rightRibbon = $('#right-ribbon');
 
               $(window).scroll(function () {
-                    if ($(this).scrollTop() > 135) {
+                    if ($(this).scrollTop() > 108) {
                         nav.addClass("f-nav");
                         leftRibbon.addClass("f-ribbon");
                         rightRibbon.addClass("f-ribbon");
@@ -86,6 +86,7 @@
         </div>
        
 	</header><!-- #header -->
+
 <div id="page" class="hfeed site">
 
 

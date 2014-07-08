@@ -8,11 +8,21 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-                   if (! is_front_page()){ ?>
+		
                       
                        
                         
+
+<div id="post_thumb">
+<?php // check if the post has a Post Thumbnail assigned to it.
+if ( has_post_thumbnail() ) {
+	the_post_thumbnail('full');
+        the_post_thumbnail_description();
+        the_post_thumbnail_caption();
+} ?>
+</div>
+<?php
+                   if (! is_front_page()){ ?>
                      <div class="content-top">  
                         <div class="line"></div>
                         <h1 class="entry-title"><?php the_title(); ?></h1>

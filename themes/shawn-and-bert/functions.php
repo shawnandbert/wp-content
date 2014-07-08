@@ -305,3 +305,90 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+function the_post_thumbnail_caption() {
+  
+
+  $thumb_id = get_post_thumbnail_id($post->id);
+
+  $args = array(
+	'post_type' => 'attachment',
+	'post_status' => null,
+	'post_parent' => $post->ID,
+	'include'  => $thumb_id
+	); 
+
+   $thumbnail_image = get_posts($args);
+
+   if ($thumbnail_image && isset($thumbnail_image[0])) { 
+
+     //Uncomment to show the thumbnail caption
+     echo '<div class="thumb_caption">'.$thumbnail_image[0]->post_content.'</div>';
+
+  }
+}
+
+function the_post_thumbnail_title() {
+  global $post;
+
+  $thumb_id = get_post_thumbnail_id($post->id);
+
+  $args = array(
+	'post_type' => 'attachment',
+	'post_status' => null,
+	'post_parent' => $post->ID,
+	'include'  => $thumb_id
+	); 
+
+   $thumbnail_image = get_posts($args);
+
+   if ($thumbnail_image && isset($thumbnail_image[0])) {
+     //show thumbnail title
+     echo $thumbnail_image[0]->post_title; 
+
+  }
+}
+
+function the_post_thumbnail_description() {
+  
+
+  $thumb_id = get_post_thumbnail_id($post_id);
+
+$args = array(
+	'post_type'   => 'attachment',
+	'post_status' => 'any',
+	'post_parent' => $post->ID,
+        'page_id'     => $thumb_id
+	); 
+
+   $thumbnail_image = get_posts($args);
+
+   if ($thumbnail_image && wp_attachment_is_image($thumb_id)){
+
+     //Uncomment to show the thumbnail description $thumbnail_image[0]->post_excerpt
+     echo '<div class="thumb_description_background"></div>
+           <div id="thumb_description_text">'.$thumbnail_image[0]->post_excerpt.'</div>'; 
+  }
+}
+
+function the_post_thumbnail_alt() {
+  global $post;
+
+  $thumb_id = get_post_thumbnail_id($post->id);
+
+  $args = array(
+	'post_type' => 'attachment',
+	'post_status' => null,
+	'post_parent' => $post->ID,
+	'include'  => $thumb_id
+	); 
+
+   $thumbnail_image = get_posts($args);
+
+   if ($thumbnail_image && isset($thumbnail_image[0])) {
+
+     //Uncomment to show the thumbnail alt field
+     $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+     if(count($alt)) echo $alt;
+  }
+}
